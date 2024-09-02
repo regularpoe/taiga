@@ -1,0 +1,5 @@
+[
+    { "Id": 1, "Name": "Alice", "Age": 30, "Email": "alice@example.com", "IsActive": true },
+    { "Id": 2, "Name": "Bob", "Age": 25, "Email": "bob@example.com", "IsActive": false },
+    { "Id": 3, "Name": "Charlie", "Age": 28, "Email": "charlie@example.com", "IsActive": true }
+]
