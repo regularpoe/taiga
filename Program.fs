@@ -35,8 +35,16 @@ let main argv =
         | Some index when index + 1 < argv.Length -> argv.[index + 1]
         | _ -> failwith "Table name not provdided"
 
+    let connectionString = "Data Source=database.db"
+
     let createTableCommand = createTableSql tableName schemaPath
 
-    printf "Table '%s' created\n" createTableCommand
+    use connection = new SqliteConnection(connectionString)
+    connection.Open()
+
+    printfn "Executing SQL: %s" createTableCommand
+    connection.Execute(createTableCommand) |> ignore
+
+    printfn "Table '%s' created successfully in SQLite database." tableName
 
     0
