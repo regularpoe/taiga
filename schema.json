@@ -1,0 +1,7 @@
+{
+    "Id": "int",
+    "Name": "string",
+    "Age": "int",
+    "Email": "string",
+    "IsActive": "bool"
+}
